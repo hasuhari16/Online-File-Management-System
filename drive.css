@@ -1,9 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none; 
+}
+
 #head{
   width: 100%;
   height: 60px;
   background-color: #ffffff;
   border-radius: 10px;
-  border:black solid 2px;;
+  border: black solid 2px;;
 }
 #search_box {
   font-size: 40px;
@@ -75,3 +83,62 @@
     margin-right:30px;
     
   }
+/* //////////////////****Navi*****///////////// */
+.menu{
+border-radius: 10px;
+overflow: hidden;
+}
+.item{
+overflow: hidden;
+}
+.h_name{
+display:block;
+padding: 12px 12px;
+background-color: hsl(111, 88%, 3%);
+color: white;
+position: relative;
+}
+.h_name:before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: hsl(111, 88%, 3%)
+  left: 20px;
+  bottom: -7px;
+  transform: rotate(45deg);
+}
+.h_name i{
+  margin-right: 10px;
+}
+.slide{
+  background-color: rgb(243, 243, 243);
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+.slide a{
+  display: block;
+  padding: 20px 20px;
+  color: rgb(12, 1, 1);
+  font-size: 20px;
+  margin:4px 0;
+  position: relative;
+}
+.slide a:before{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background:black;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+.slide a:hover:before{
+  opacity: 1;
+}
+.item:target .slide{
+  max-height: 15em;
+}
